@@ -9,34 +9,34 @@ using namespace std;
 void main() 
 {
 	setlocale(LC_ALL, "Rus");
-	//Вывод списка файлов директории
-	//struct _finddata_t c_file;
-	//long hFile;
-	//int size = 0;
-	///*Find first *.* file in current directory*/
-	//if ((hFile = _findfirst("*.*", &c_file)) == -1L) /*расширение text.txt и имя text.txt */
-	//	printf("No * files in current directory!\n");
-	//else
-	//{
-	//	printf("Listing of files\n\n");
-	//	if (!(c_file.attrib&_A_SUBDIR))
-	//		cout << setw(30) << c_file.name << " " << setw(20) << c_file.size << endl;
-	//	size++;
-	//	//Find the rest of the .txt files
-	//	while (_findnext(hFile, &c_file)==0)
-	//	{
-	//		if(!(c_file.attrib&_A_SUBDIR))
-	//			cout << setw(30) << c_file.name << " " << setw(20) << c_file.size << endl;
-	//		size++;
-	//	}
-	//	_findclose(hFile);
-	//}
-	//cout << size << endl;
+	//Р’С‹РІРѕРґ СЃРїРёСЃРєР° С„Р°Р№Р»РѕРІ РґРёСЂРµРєС‚РѕСЂРёРё
+	/*struct _finddata_t c_file;
+	long hFile;
+	int size = 0;
+	//Find first *.* file in current directory
+	if ((hFile = _findfirst("*.*", &c_file)) == -1L) //СЂР°СЃС€РёСЂРµРЅРёРµ text.txt 
+		printf("No * files in current directory!\n");
+	else
+	{
+		printf("Listing of files\n\n");
+		if (!(c_file.attrib&_A_SUBDIR))
+			cout << setw(30) << c_file.name << " " << setw(20) << c_file.size << endl;
+		size++;
+		//Find the rest of the .txt files
+		while (_findnext(hFile, &c_file)==0)
+		{
+			if(!(c_file.attrib&_A_SUBDIR))
+				cout << setw(30) << c_file.name << " " << setw(20) << c_file.size << endl;
+			size++;
+		}
+		_findclose(hFile);
+	}
+	cout << size << endl;*/
 	int n;
 	cin >> n;
 	if (n == 1)
 	{
-		cout << "1. Дана строка S. Если S является допустимым именем файла, то создать пустой файл с этим именем и вывести TRUE. Если файл с именем S создать нельзя, то вывести FALSE" << endl;
+		cout << "1. Р”Р°РЅР° СЃС‚СЂРѕРєР° S. Р•СЃР»Рё S СЏРІР»СЏРµС‚СЃСЏ РґРѕРїСѓСЃС‚РёРјС‹Рј РёРјРµРЅРµРј С„Р°Р№Р»Р°, С‚Рѕ СЃРѕР·РґР°С‚СЊ РїСѓСЃС‚РѕР№ С„Р°Р№Р» СЃ СЌС‚РёРј РёРјРµРЅРµРј Рё РІС‹РІРµСЃС‚Рё TRUE. Р•СЃР»Рё С„Р°Р№Р» СЃ РёРјРµРЅРµРј S СЃРѕР·РґР°С‚СЊ РЅРµР»СЊР·СЏ, С‚Рѕ РІС‹РІРµСЃС‚Рё FALSE" << endl;
 		struct _finddata_t c_file;
 		long hFile;
 		int size = 0;
@@ -45,7 +45,7 @@ void main()
 		char str[20];
 		cin >>str;
 
-		if ((hFile = _findfirst(str, &c_file)) == -1L) /*расширение text.txt и имя text.txt */
+		if ((hFile = _findfirst(str, &c_file)) == -1L) 
 		{
 			o.open(str);
 			cout << "True" << endl;
